@@ -1,4 +1,4 @@
-//Simple program to find if two string is angram or not.
+//Program to find if two strings are Anagram or not
 import java.util.Scanner;
 public class Anagram
 {
@@ -11,11 +11,6 @@ public class Anagram
 		System.out.print("Enter the second string: ");
 		String s2=input.nextLine();
 		
-		if(s1.length()!=s2.length())
-			System.out.println("They are not anagram");
-		
-		else
-		{
 			
 			int arr1[]=new int[26];
 			int arr2[]=new int[26];
@@ -26,21 +21,26 @@ public class Anagram
 			char[] s3=s1.toCharArray();
 			char[] s4=s2.toCharArray();
 			
-			int countSpaceFirst=0,countSpaceSecond=0;
 			
 			for(int i=0;i<s1.length();i++)
 			{
 				if(s3[i]==' ')
-					countSpaceFirst++;
+				{
+					
+				}
 				else
 				{
 					int x=s3[i]-'a';
 					arr1[x]++;
 				}
+			}
 				
-				
+			for(int i=0;i<s2.length();i++)
+			{				
 				if(s4[i]==' ')
-					countSpaceSecond++;
+				{
+					
+				}
 				else
 				{
 					int x=s4[i]-'a';
@@ -57,13 +57,11 @@ public class Anagram
 					break;
 				}
 			}
-			if(flag==0 && countSpaceFirst==countSpaceSecond)
+			if(flag==0)
 				System.out.println("They are anagram");
 			else
 				System.out.println("They are not anagram");
 			
-			
-			}
 			
 	}
 }
