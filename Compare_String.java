@@ -1,3 +1,4 @@
+//This program compare two string by length,substring and lexicographically
 import java.util.Scanner;
 public class Compare_String
 {
