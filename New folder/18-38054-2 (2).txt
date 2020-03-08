@@ -1,0 +1,209 @@
+//Task 1
+//Vehicle class
+public class Vehicle
+{
+	public String typeOfVehicle;
+	public String name;
+	public int noOfWheels;
+	public int noOfDoors;
+		
+	public Vehicle()
+	{
+		
+	}
+	
+	public Vehicle(String typeOfVehicle,String name, int noOfWheels,int noOfDoors)
+	{
+		this.typeOfVehicle=typeOfVehicle;
+		this.name=name;
+		this.noOfWheels=noOfWheels;
+		this.noOfDoors=noOfDoors;
+	}
+	
+	public void showInfo()
+	{
+		System.out.println("Type of the vehicle: "+typeOfVehicle);
+		System.out.println("Name of the vehicle: "+name);
+		System.out.println("Number of wheels of the vehicle: "+noOfWheels);
+		System.out.println("Number of doors of the vehicle: "+noOfDoors);
+	}
+}
+
+//**********************************************************************************
+//main class for vehicle
+
+import java.util.Scanner;
+public class mainVehicle
+{
+	public static void main(String args[])
+	{
+		Scanner input=new Scanner(System.in);
+		String typeOfVehicle;
+	    String name;
+	    int noOfWheels;
+	    int noOfDoors;
+		
+		System.out.print("Enter the type of the vehicle: ");
+		typeOfVehicle=input.next();
+		
+		System.out.print("Enter the name of the vehicle: ");
+		name=input.next();
+		
+		System.out.print("Enter the number of the wheel of the vehicle: ");
+		noOfWheels=input.nextInt();
+		
+		System.out.print("Enter the number of doors of the vehicle: ");
+		noOfDoors=input.nextInt();
+		
+		Vehicle obj=new Vehicle(typeOfVehicle,name,noOfWheels,noOfDoors);
+		
+		obj.showInfo();
+	}
+}
+
+//********************************************************************************
+
+
+
+
+
+//********************************************************************************
+//Task 2
+//Rectangle class
+
+public class Rectangle
+{
+	public int height;
+	public int width;
+	public int result;
+	
+	public Rectangle(int height,int width)
+	{
+		this.height=height;
+		this.width=width;
+	}
+	
+	public void calculateAreaRectangle()
+	{
+		System.out.println("Calculating area of Rectangle.......");
+		result=height*width;
+	}
+	
+	public void showAreaOfRectangle()
+	{
+		System.out.println("Area of the Rectangle is: "+result);
+		System.out.println();
+	}
+}
+//*******************************************************************************
+//square class
+
+public class Square
+{
+	public int length;
+	public int result;
+	
+	public Square(int length)
+	{
+		this.length=length;
+	}
+	
+	public void calculateAreaSquare()
+	{
+		System.out.println("Calculating area of Square.......");
+		result=length*length;
+	}
+	
+	public void showAreaOfSquare()
+	{
+		System.out.println("Area of the square is: "+result);
+		System.out.println();
+	}
+}
+
+//**************************************************************************
+//Circle class
+
+public class Circle
+{
+	public double radius;
+	public double result;
+	
+	public Circle(double radius)
+	{
+		this.radius=radius;
+	}
+	
+	public void calculateAreaCircle()
+	{
+		System.out.println("Calculating area of Circle.......");
+		result=Math.PI*radius*radius;
+	}
+	
+	public void showAreaOfCircle()
+	{
+		System.out.println("Area of the Circle is: "+result);
+		System.out.println();
+	}
+}
+
+//*************************************************************
+
+//main class for area calculation
+import java.util.Scanner;
+public class mainArea
+{
+	public static void main(String arg[])
+	{
+		Scanner input=new Scanner(System.in);
+		
+		while(true)
+		{
+			System.out.println("Which option you want to choose: ");
+			System.out.println("Enter 0 to get out of the system: ");
+			System.out.println("Enter 1 to calculate area of Rectangle: ");
+			System.out.println("Enter 2 to calculate area of Square: ");
+			System.out.println("Enter 3 to calculate area of Circle: ");
+			System.out.println();
+			System.out.print("Now enter your desired option: ");
+			int option=input.nextInt();
+			if(option==0)
+				break;
+			
+			else if(option==1)
+			{
+				System.out.print("Enter height of the Rectangle: ");
+				int height=input.nextInt();
+				System.out.print("Enter width of the Rectangle: ");
+				int width=input.nextInt();
+				Rectangle r1=new Rectangle(height,width);
+				r1.calculateAreaRectangle();
+				r1.showAreaOfRectangle();
+			}
+			
+			else if(option==2)
+			{
+				System.out.print("Enter length of the Square: ");
+				int length=input.nextInt();
+				Square s1=new Square(length);
+				s1.calculateAreaSquare();
+				s1.showAreaOfSquare();
+			}
+			
+			else if(option==3)
+			{
+				System.out.print("Enter radius of the Circle: ");
+				double radius=input.nextDouble();
+				Circle c1=new Circle(radius);
+				c1.calculateAreaCircle();
+				c1.showAreaOfCircle();
+			}
+			
+		}
+
+	}
+}
+
+//**********************************************************************
+
+//**********************************************************************

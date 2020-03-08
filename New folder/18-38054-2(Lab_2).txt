@@ -1,0 +1,234 @@
+//program 1
+//write a programme to find the min and maximum
+
+import java.util.Scanner;
+public class Programme4
+{
+	public static void main(String arg[])
+	{
+		Scanner input=new Scanner(System.in);
+		
+		System.out.print("Enter the size of the array: ");
+		int siz=input.nextInt();
+		
+		int[] number=new int[siz];
+		
+		System.out.println("Enter your inputs: ");
+		for(int i=0; i<siz ;i++)
+		{
+			number[i]=input.nextInt();
+			
+		}
+		int minNumber=number[0];
+		int maxNumber=number[0];
+		
+		for(int i=0; i<siz ;i++)
+		{
+			if(maxNumber<number[i])
+				maxNumber=number[i];
+			
+			if(minNumber>number[i])
+				minNumber=number[i];
+			
+		}
+		
+		System.out.println("The maximum number in the array is: "+maxNumber+"\nThe minimum number in the array is: "+minNumber);
+	}
+}
+
+/*...............................................................................
+.................................................................................
+.................................................................................*/
+
+//program 2
+//write a programme to compare two string
+
+import java.util.Scanner;
+public class Programme3
+{
+	public static void main(String arg[])
+	{
+		Scanner input=new Scanner(System.in);
+		
+		System.out.print("Enter your first string: ");
+		String s1=input.next();
+		
+		System.out.print("Enter your second string: ");
+		String s2=input.next();
+		
+		int sz1=s1.length();
+		int sz2=s2.length();
+		
+		
+		System.out.println("................................");
+		System.out.println("Compare by length: ");
+		if(sz1==sz2)
+		{
+			System.out.println("Both string are equal.");
+		}
+		else if(sz1>sz2)
+		{
+			System.out.println("First string is greater");
+		}
+		else
+			System.out.println("Second string in greater");
+		System.out.println("................................");
+		
+		
+		System.out.println("................................");
+		System.out.println("Compare by substring: ");
+		if(s1.equals(s2))
+			System.out.println("The content of the two string is equal");
+		else if(s1.contains(s2))
+			System.out.println("Second string a sub string of the first one ");
+		else if(s2.contains(s1))
+			System.out.println("First one is a sub string of the second one");
+		else
+			System.out.println("Nothing matched");
+		System.out.println("................................");
+		
+		
+		
+		System.out.println("................................");
+		System.out.println("Compare lexicographically: ");
+		int res=s1.compareTo(s2);
+		if(res>0)
+			System.out.println("First string is lexicographically larger than second one");
+		else if(res<0)
+			System.out.println("First string is lexicographically smaller than the second one");
+		else
+			System.out.println("They are equal");
+		System.out.println("................................");
+			
+	}
+}
+/*....................................................................
+......................................................................
+......................................................................*/
+
+//program 3
+//write a programme to convert string into lower case
+import java.util.Scanner;
+public class Lab_1_Task3
+{
+	public static void main(String arg[])
+	{
+		Scanner input=new Scanner(System.in);
+		System.out.print("Enter the string:");
+		String s=input.nextLine();
+		s=s.toLowerCase();
+		System.out.println(s);
+	}
+}
+
+/*.......................................................................
+..........................................................................
+.........................................................................*/
+//program 1
+//program to find prime
+import java.lang.Math;
+import java.util.Scanner;
+public class Lab_1_1
+{
+	public static void main(String arg[])
+	{
+		Scanner input=new Scanner(System.in);
+		System.out.print("Enter the intput: ");
+		double number=input.nextDouble();
+		double stp= Math.sqrt(number); 
+		int n=(int)(stp);
+		int fag=0;
+		int nmbr=(int)(number);
+		for(int i=2;i<=n;i++)
+		{
+			if(nmbr%2==0)
+			{
+				fag=1;
+				break;
+			}
+		}
+		if(fag==0)
+			System.out.println("The number is prime.");
+		else
+			System.out.println("The number is not prime.");
+		
+	}
+}
+
+/*......................................................................
+........................................................................
+........................................................................*/
+
+//program 2
+//program to find palindrome
+
+import java.util.Scanner;
+public class Lab_1_2
+{
+	public static void main(String arg[])
+	{
+		Scanner input=new Scanner(System.in);
+		System.out.print("Ente the string: ");
+		String s1=input.nextLine();
+		int len=s1.length();
+		char[] s2=s1.toCharArray();
+		char[] s3=new char[len];
+		int j=0;
+		for(int i=len-1;i>=0;i--)
+		{
+			s3[j++]=s2[i];
+		}
+		
+		int fag=0;
+		for(int i=0;i<len;i++)
+		{
+			if(s2[i] != s3[i])
+			{
+				fag=1;
+				break;
+			}
+		}
+		
+		if(fag==0)
+			System.out.println("It is palindrome.");
+		else
+			System.out.println("It is not palindrome.");
+	}
+}
+
+/*.......................................................................
+..........................................................................
+..........................................................................*/
+
+//program 3
+//program to find even odd
+
+import java.util.Scanner;
+public class Even_Odd
+{
+	public static void main(String arg[])
+	{
+		Scanner input=new Scanner(System.in);
+		
+		System.out.print("Enter the size of the array: ");
+		int siz=input.nextInt();
+		
+		int[] number=new int[siz];
+		int sum=0;
+		System.out.print("Enter your inputs: ");
+		for(int i=0; i<siz ;i++)
+		{
+			number[i]=input.nextInt();
+			
+			if(number[i]%2==1)
+				System.out.println("The element of index ["+i+"] is "+number[i]+" which is odd");
+			else
+				System.out.println("The element of index ["+i+"] is "+number[i]+" which is even");
+		}
+		
+	}
+}
+
+/*............................................................................
+..............................................................................
+..............................................................................*/
