@@ -1,0 +1,18 @@
+
+
+Create the following classes with the given attrbutes
+and convert all the classes in Encapsulation manner
+		1) Animal.java
+			-height (double)
+			-weight (double)
+			-color (String)
+		2) Mammal.java
+			-hasHair(boolen)
+			-hasFur(boolean)
+		3) Reptile.java
+			-isBipolar(boolean)
+		4) Main.java
+create objects of every class from main.
+
+
+						

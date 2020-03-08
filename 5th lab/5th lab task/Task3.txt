@@ -1,0 +1,22 @@
+
+
+Create the following classes with the given attrbutes 
+and also create packages
+		1) org.parent ----- Animal.java
+			-height (double)
+			-weight (double)
+			-color (String)
+		2) org.child ------ Mammal.java
+			-hasHair(boolen)
+			-hasFur(boolean)
+		3) org.child ------ Reptile.java
+			-isBipolar(boolean)
+		3) org.child ------ Lion.java
+			-isBipolar(boolean)
+		4) org.main ------- Main.java
+Mammal and Reptile will extend Animal.
+Lion will extend Mammal.
+create objects of every class from main.
+
+
+						

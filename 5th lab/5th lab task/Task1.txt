@@ -1,0 +1,19 @@
+
+
+Create the following classes with the given attrbutes:
+N.B: No constructor. No setter and no getter
+		1) Animal.java
+			-height (double)
+			-weight (double)
+			-color (String)
+		2) Mammal.java
+			-hasHair(boolen)
+			-hasFur(boolean)
+		3) Reptile.java
+			-isBipolar(boolean)
+		4) Main.java
+Make all the attributes public and create objects of every
+class from main.
+
+
+						
